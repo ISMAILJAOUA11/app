@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
+from functions import *
 
 
 # 1)  Come scaricare la cartella creata su GitHub
@@ -21,17 +22,7 @@ from sklearn.decomposition import PCA
 #           steamlit run app0.py
 
 
-def get_df_info(df):
 
-    buffer = io.StringIO()
-    df.info(buf=buffer)
-    lines = buffer.getvalue().split('\n')
-
-    # st.dataframe(lines[0:3])
-    # st.dataframe(lines)
-
-    for x in lines:
-        st.text(x)
 
 
 def main():
